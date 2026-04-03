@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ulaznice</title>
+
+        <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <!-- HERO -->
+    <section class="page-hero">
+        <h1>ULAZNICE</h1>
+    </section>
+
+    <!-- INTRO -->
+    <section class="tickets-intro">
+        <p>
+            Odaberi svoju ulaznicu i osiguraj mjesto na najbržem eventu godine.
+            3 dana. 400+ vozila. Bez kočnica.
+        </p>
+    </section>
+
+    <!-- TICKETS -->
+    <section class="tickets-types">
+
+        <!-- JEDNODNEVNA -->
+        <div class="ticket-card" onclick="goToBuy()">
+            <h3>JEDNODNEVNA</h3>
+            <p class="desc">Vrijedi za jedan dan (petak, subota ili nedjelja).</p>
+
+            <div class="price"> od 19,90€</div>
+            <p class="note">Djeca do 12 godina besplatno</p>
+
+            <ul>
+                <li>Ulazak na festival</li>
+                <li>Parking uključen</li>
+                <li>Pristup tribinama*</li>
+            </ul>
+            <br>
+            <small>* mjesta nisu rezervirana</small>
+        </div>
+
+        <!-- FESTIVAL -->
+        <div class="ticket-card featured" onclick="goToBuy()">
+            <div class="badge">NAJPOPULARNIJE</div>
+
+            <h3>FESTIVALSKA</h3>
+            <p class="desc">Vrijedi za sva tri dana festivala.</p>
+
+            <div class="price">od 19,90€</div>
+            <p class="note">Djeca do 12 godina besplatno</p>
+
+            <ul>
+                <li>Ulazak 3 dana</li>
+                <li>Parking 3 dana</li>
+                <li>Pristup tribinama</li>
+            </ul>
+            <br>
+            <small>* mjesta nisu rezervirana</small>
+        </div>
+
+        <!-- VIP -->
+        <div class="ticket-card vip" onclick="goToBuy()">
+            <h3>VIP</h3>
+
+            <p class="desc">Premium iskustvo za jedan dan.</p>
+
+            <div class="price">VIP</div>
+
+            <ul>
+                <li>Fast track ulaz</li>
+                <li>VIP parking</li>
+                <li>Hrana i piće</li>
+                <li>VIP lounge</li>
+                <li>Pristup tribinama</li>
+            </ul>
+        </div>
+
+    </section>
+
+    <!-- BUY -->
+    <section class="tickets-embed" id="buy">
+
+        <div class="buy-header">
+            <h2>KUPI ULAZNICE</h2>
+            <p>Sigurna kupnja putem Entrio sustava</p>
+        </div>
+
+        <div class="entrio-wrapper">
+            <iframe 
+            src="https://www.entrio.hr/widgets/event_widget/18557/dark"
+            loading="lazy">
+            </iframe>
+        </div>
+
+    </section>
+
+    <!-- CTA -->
+    <section class="tickets-cta">
+        <h2>VIDIMO SE NA STAZI</h2>
+    </section>
+
+    <script>
+    fetch("header.html")
+    .then(res => res.text())
+    .then(data => {
+        document.getElementById("header-placeholder").innerHTML = data;
+    });
+
+    function toggleMenu(){
+        document.getElementById("menu").classList.toggle("active");
+    }
+
+    function goToBuy(){
+        document.getElementById("buy").scrollIntoView({
+            behavior: "smooth"
+        });
+    }
+    </script>
+
+</body>
+</html>

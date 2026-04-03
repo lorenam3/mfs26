@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lokacija</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <section class="map-section" data-aos="fade-up">
+        <h2>LOKACIJA</h2>
+        <div class="map-wrapper">
+            <iframe 
+                src="https://www.google.com/maps?q=Automotodrom+Grobnik&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+
+        <a href="https://www.google.com/maps?q=Automotodrom+Grobnik" target="_blank" class="cta mt-4">
+            OTVORI U GOOGLE MAPS
+        </a>
+    </section>
+
+    <section class="info-section container" data-aos="fade-up">
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>PARKIRANJE</h3>
+                <p>Osigurano parkiralište za sve posjetitelje.</p>
+            </div>
+            <div class="info-card">
+                <h3>JELO I PIĆE</h3>
+                <p>Food truck zona + barovi.</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        fetch("header.html")
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById("header-placeholder").innerHTML = data;
+        });
+
+        function toggleMenu(){
+            document.getElementById("menu").classList.toggle("active");
+        }
+    </script>
+</body>
+</html>
