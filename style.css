@@ -450,9 +450,9 @@ section,
 }
 
 /* section logo divider --------------------------------------------------*/
-.section-logo-divider {
+/* .section-logo-divider {
   text-align: center;
-  /* padding: 40px 20px; */
+  /* padding: 40px 20px;
 }
 
 .section-logo-divider img {
@@ -465,7 +465,7 @@ section,
 .section-logo-divider img:hover {
   opacity: 1;
   transform: scale(1.05);
-}
+} */
 
 
 
@@ -1283,9 +1283,9 @@ section,
     max-width: 90%;
   }
 
-  .section-logo-divider img {
+  /* .section-logo-divider img {
     width: 700px;
-  }
+  } */
 
 
   /* ----- vodeći ljudi -------*/
