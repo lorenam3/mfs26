@@ -99,6 +99,19 @@ section,
   height: 30px;
 }
 
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.event-date {
+  color: #FFD200;
+  font-size: 16px;
+  margin-top: 12px;
+  letter-spacing: 1px;
+}
+
 .hamburger {
   font-size: 24px;
   cursor: pointer;
@@ -401,7 +414,7 @@ section,
   color: #fff;
 
   /* background slika */
-  background-image: url("img/mfs_uzorak_rgb_boja.png");
+  /* background-image: url("img/mfs_uzorak_rgb_boja.png"); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1058,8 +1071,8 @@ section,
 .about-text {
   font-size: 14px;
   color: #bbb;
-  line-height: 1.5;
-  margin-bottom: 10px;
+  line-height: 1.8;
+  margin: 10px 0;
   max-width: 500px;
 }
 /* --------------- PROBA ----------- */
@@ -1075,6 +1088,17 @@ section,
   .contact-section {
     padding-top: var(--section-space);
     padding-bottom: var(--section-space);
+  }
+
+  .logo {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .event-date {
+    font-size: 18px;
+    margin-top: 0;
+    margin-left: 10px;
   }
 
   .hamburger {
@@ -1349,6 +1373,16 @@ section,
     grid-template-columns: repeat(3,1fr);
     padding: 130px 20px;
   }
+
+  .about-title {
+    font-size: 32px;
+  }
+
+  .about-text {
+    font-size: 20px;
+    margin: 35px 0 0;
+  }
+
 }
 
 @media (min-width: 1024px) {
@@ -1359,10 +1393,6 @@ section,
   .about-big {
     font-size: 56px;
     max-width: 800px;
-  }
-
-  .about-text {
-    font-size: 16px;
   }
 
   .carousel-section img {
