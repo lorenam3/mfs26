@@ -183,7 +183,7 @@ section,
 
 .category {
   position: relative;
-  height: 100vh;
+  height: 80vh;
   overflow: hidden;
 }
 
@@ -192,6 +192,34 @@ section,
   height: 100vh;
   object-fit: cover;
   filter: brightness(0.6);
+}
+
+/* .swiper,
+.swiper-slide {
+  height: 100%;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+} */
+
+/* mobile */
+.category {
+  height: auto;
+}
+
+.category .swiper,
+.category .swiper-slide {
+  aspect-ratio: 3/4;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .category::after {
@@ -208,7 +236,7 @@ section,
 
 .category-content {
   position: absolute;
-  bottom: 40px;
+  bottom: 65px;
   left: 20px;
   right: 20px;
   z-index: 2;
