@@ -213,7 +213,7 @@ section,
 
 .category .swiper,
 .category .swiper-slide {
-  aspect-ratio: 3/4;
+  aspect-ratio: 4/5;
 }
 
 .swiper-slide img {
@@ -369,7 +369,7 @@ section,
 }
 
 .slide-desc {
-  font-size: 13px;
+  font-size: 15px;
   margin-top: 6px;
   color: #bbb;
   line-height: 1.4;
@@ -1097,7 +1097,8 @@ section,
 }
 
 .about-text {
-  font-size: 14px;
+  font-size: 17px;
+  font-weight: 500;
   color: #bbb;
   line-height: 1.8;
   margin: 10px 0;
