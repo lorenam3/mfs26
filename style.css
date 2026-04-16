@@ -183,7 +183,8 @@ section,
 
 .category {
   position: relative;
-  height: 80vh;
+  /* height: 80vh; */
+  height: auto;
   overflow: hidden;
 }
 
@@ -211,7 +212,7 @@ section,
   height: auto;
 }
 
-.category .swiper,
+/* .category .swiper,
 .category .swiper-slide {
   aspect-ratio: 4/5;
 }
@@ -220,7 +221,28 @@ section,
   width: 100%;
   height: 100%;
   object-fit: cover;
+} */
+
+.category-bg picture,
+.category-bg img {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
+
+.category-bg {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+}
+
+/* .category-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+} */
 
 .category::after {
   content: "";
@@ -228,7 +250,7 @@ section,
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(0,0,0,0.9),
+    rgba(0,0,0,65%),
     rgba(0,0,0,0.3),
     transparent
   );
@@ -1206,13 +1228,19 @@ section,
     overflow: hidden;
   }
 
+  .category-bg {
+    position: absolute;
+    inset: 0;
+    aspect-ratio: auto;
+  }
+
   /* POZADINA */
   .category-bg img {
     width: 100%;
     height: 100vh;
     object-fit: cover;
     object-position: center 30%;
-    filter: brightness(0.5) contrast(1.2);
+    /* filter: brightness(0.5) contrast(1.2); */
   }
 
   .category-bg .bg-02 img{
@@ -1227,12 +1255,12 @@ section,
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(
+    /* background: linear-gradient(
       to right,
       rgba(0,0,0,0.85) 20%,
       rgba(0,0,0,0.4) 60%,
       transparent 100%
-    );
+    ); */
   }
 
   .category-content {
@@ -1272,23 +1300,14 @@ section,
     right: 15%;
   }
 
-  .category::after {
-    background: linear-gradient(
-      to right,
-      rgba(0,0,0,0.85) 20%,
-      rgba(0,0,0,0.4) 60%,
-      transparent 100%
-    );
-  }
-
-  .category.right::after {
+  /* .category.right::after {
     background: linear-gradient(
       to left,
       rgba(0,0,0,0.85) 20%,
       rgba(0,0,0,0.4) 60%,
       transparent 100%
     );
-  }
+  } */
 
   .category-content.motorsport,
   .category-content.newcomers,
