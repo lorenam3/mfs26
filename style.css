@@ -1157,7 +1157,7 @@ section,
 .sponsors-title {
   color: #FFD200;
   font-size: 2.5rem;
-  letter-spacing: 6px;
+  font-weight: 800;
   margin-bottom: 60px;
   text-transform: uppercase;
 }
