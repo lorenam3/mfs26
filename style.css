@@ -30,6 +30,7 @@
 :root {
   --section-space: 80px;
   --section-space-mobile: 60px;
+  --header-height: 80px;
 }
 
 html {
@@ -41,6 +42,7 @@ body {
   background: #000;
   color: #fff;
   font-family: "New Science", sans-serif;
+  /* padding-top: var(--header-height); */
 }
 
 section,
@@ -58,9 +60,11 @@ section,
 .header {
   position: fixed;
   width: 100%;
-  background: rgba(0,0,0,0.8);
+  background: rgba(0,0,0, 42%);
   z-index: 1000;
-  padding: 20px;
+  padding: 10px;
+  height: var(--header-height);
+  backdrop-filter: blur(4px);
 }
 
 .desktop-nav {
@@ -148,6 +152,7 @@ section,
 .hero {
   width: 100%;
   padding-top: 0;
+  margin-top: 0;
 }
 
 .hero video {
@@ -156,7 +161,7 @@ section,
   width: 100%;
   height: auto;
   object-fit: cover;
-  top: 0;
+  top: 80px;
 }
 
 .video-desktop {
@@ -321,25 +326,6 @@ section,
   overflow: hidden;
 }
 
-.carousel-container::before,
-.carousel-container::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 80px;
-  height: 100%;
-  z-index: 2;
-}
-
-.carousel-container::before {
-  left: 0;
-  background: linear-gradient(to right, #000, transparent);
-}
-
-.carousel-container::after {
-  right: 0;
-  background: linear-gradient(to left, #000, transparent);
-}
 
 .carousel-section .swiper {
   padding: 40px 0;
@@ -1163,25 +1149,6 @@ section,
   text-transform: uppercase;
 }
 
-.sponsors::before,
-.sponsors::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 150px;
-  height: 100%;
-  z-index: 2;
-}
-
-.sponsors::before {
-  left: 0;
-  background: linear-gradient(to right, #000, transparent);
-}
-
-.sponsors::after {
-  right: 0;
-  background: linear-gradient(to left, #000, transparent);
-}
 
 .sponsors-grid {
   display: grid;
@@ -1244,6 +1211,10 @@ section,
     font-size: 18px;
     margin-top: 0;
     margin-left: 10px;
+  }
+
+  .header {
+    padding: 20px;
   }
 
   .hamburger {
@@ -1429,7 +1400,25 @@ section,
     width: 700px;
   } */
 
+  .carousel-container::before,
+  .carousel-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 80px;
+    height: 100%;
+    z-index: 2;
+  }
 
+  .carousel-container::before {
+    left: 0;
+    background: linear-gradient(to right, #000, transparent);
+  }
+
+  .carousel-container::after {
+    right: 0;
+    background: linear-gradient(to left, #000, transparent);
+  }
   /* ----- vodeći ljudi -------*/
   .people-grid {
     grid-template-columns: repeat(4,1fr);
@@ -1512,6 +1501,26 @@ section,
     transform: scale(1.1);
   }
 
+  .sponsors::before,
+  .sponsors::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    z-index: 2;
+  }
+
+  .sponsors::before {
+    left: 0;
+    background: linear-gradient(to right, #000, transparent);
+  }
+
+  .sponsors::after {
+    right: 0;
+    background: linear-gradient(to left, #000, transparent);
+  }
+
   .tickets-hero {
     height: 60vh;
   }
@@ -1519,6 +1528,7 @@ section,
   .tickets-hero-content {
     max-width: 600px;
     padding: 30px;
+    top: 25%;
   }
 
   .tickets-hero-content h1 {
