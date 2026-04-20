@@ -46,7 +46,7 @@ body {
 }
 
 body.no-scroll {
-  overflow: hidden !important;
+  overflow: hidden;
 }
 
 section,
@@ -128,7 +128,6 @@ section,
 
 .mobile-menu {
   position: fixed;
-  inset: 0;
   top: 0;
   right: -100%;
   width: 100%;
