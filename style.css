@@ -45,6 +45,10 @@ body {
   /* padding-top: var(--header-height); */
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 section,
 .category,
 .carousel-section,
@@ -140,6 +144,7 @@ section,
   right: 0;
   z-index: 100;
   opacity: 80%;
+  backdrop-filter: blur(4px);
 }
 
 .mobile-menu a {
