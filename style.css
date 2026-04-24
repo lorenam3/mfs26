@@ -42,7 +42,6 @@ body {
   background: #000;
   color: #fff;
   font-family: "New Science", sans-serif;
-  /* padding-top: var(--header-height); */
 }
 
 body.no-scroll {
@@ -58,6 +57,11 @@ section,
 .contact-section {
   padding-top: var(--section-space-mobile);
   padding-bottom: var(--section-space-mobile);
+}
+
+.cta:hover {
+  color: rgb(15, 15, 15);
+  text-decoration: none;
 }
 
 /* ----------------- HEADER , desktop i mobile nav --------------------- */
@@ -177,47 +181,45 @@ section,
   display: block;
 }
 
-/* .cta::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.5), transparent);
-  top: 0;
-  left: -100%;
-  transition: 0.6s;
+/************************** ABOUT-COMPACT *****************************/
+
+.about-compact {
+  background: #000;
+  color: #fff;
 }
 
-.cta:hover::before {
-  left: 100%;
-} */
+.about-title {
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: #777;
+  margin-bottom: 15px;
+}
 
-/* CATEGORY */
+.about-big {
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
 
+.highlight-about {
+  color: #FFD200;
+}
+
+.about-text {
+  font-size: 17px;
+  font-weight: 500;
+  color: #bbb;
+  line-height: 1.8;
+  margin: 10px 0;
+  max-width: 500px;
+}
+
+/********************* CATEGORY *************************/
 .category {
   position: relative;
-  /* height: 80vh; */
   height: auto;
   overflow: hidden;
-}
-
-.category-bg img {
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
-  filter: brightness(0.6);
-}
-
-/* mobile */
-.category {
-  height: auto;
-}
-
-.category-bg picture,
-.category-bg img {
-  display: block;
-  width: 100%;
-  height: 100%;
 }
 
 .category-bg {
@@ -227,12 +229,23 @@ section,
   overflow: hidden;
 }
 
-/* .category-bg img {
-  width: 100%;
-  height: 100%;
+.category-bg img {
   object-fit: cover;
   filter: brightness(0.6);
-} */
+  transform: scale(1.1);
+  transition: transform 6s ease;
+}
+
+.category:hover .category-bg img {
+  transform: scale(1.2);
+}
+
+.category-bg picture,
+.category-bg img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 
 .category::after {
   content: "";
@@ -274,7 +287,8 @@ section,
   color: rgba(255,255,255,0.08);
 }
 
-.sub {
+/************ SUB SECTION *********************/
+/* .sub {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
@@ -322,15 +336,14 @@ section,
 
 .sub-item:hover::after {
   opacity: 1;
-}
+} */
 
-/* CAROUSEL SECTION */
+/************************  CAROUSEL SECTION ******************************/
 .carousel-section {
   padding: 60px 20px;
   position: relative;
   overflow: hidden;
 }
-
 
 .carousel-section .swiper {
   padding: 40px 0;
@@ -378,7 +391,7 @@ section,
 }
 
 /* ------------------  vodeći ljudii ------------ */
-.people {
+/* .people {
   padding: 60px 20px;
   background: #000;
   color: #fff;
@@ -424,9 +437,66 @@ section,
 .person img {
   width: 100%;
   border-radius: 10px;
+} */
+
+
+/******************************* SPONZORI     ****************************/
+.sponsors {
+  padding: 40px 20px;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
 }
 
-/* FNAL CTA ZA KUPNJU ULAZNICA*/
+.sponsors-title {
+  color: #FFD200;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 60px;
+  text-transform: uppercase;
+}
+
+.sponsors-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+} 
+
+.sponsor-item {
+  background: rgba(255,255,255,0.05);
+  transition: 0.4s ease;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  height: 80px;
+}
+
+.sponsor-item img {
+  max-width: 100%;
+  max-height: 95px;
+  object-fit: contain;
+  filter: grayscale(100%) brightness(0.8);
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.sponsor-item:hover img {
+  filter: grayscale(0%) brightness(1);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* ANIMATION */
+@keyframes scrollSponsors {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+
+
+/*********** FNAL CTA ZA KUPNJU ULAZNICA **************/
 .final-cta {
   position: relative;
   margin: 30px 0 0;
@@ -449,21 +519,13 @@ section,
   text-decoration: none;
 }
 
-/* .final-cta::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.75);
-  z-index: 1;
-} */
-
 .final-cta h2,
 .final-cta .cta {
   position: relative;
   z-index: 2;
 }
 
-/* section logo divider --------------------------------------------------*/
+/***************** section logo divider **********/
 /* .section-logo-divider {
   text-align: center;
   /* padding: 40px 20px;
@@ -481,11 +543,11 @@ section,
   transform: scale(1.05);
 } */
 
+/******************* ************************/
+/******************* ************************/
+/******************* ************************/
 
-
-
-/* ULAZNICE PODSTRANICA */
-
+/************** ULAZNICE PODSTRANICA *****************/
 .tickets-hero {
   position: relative;
   height: 80vh;
@@ -511,7 +573,8 @@ section,
   filter: brightness(0.6);
 }
 
-.tickets-hero-overlay {
+.tickets-hero-overlay,
+.location-hero__overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
@@ -527,16 +590,19 @@ section,
   z-index: 2;
   padding: 20px;
   top: 30%;
+  animation: fadeUp 1s ease;
 }
 
-.tickets-hero-content h1 {
+.tickets-hero-content h1,
+.location-content h1 {
   font-size: 2rem;
   color: #FFD200;
   letter-spacing: 3px;
   font-weight: 800;
 }
 
-.tickets-hero-content p {
+.tickets-hero-content p,
+.location-content p {
   font-size: 14px;
   opacity: 0.8;
   margin-top: 10px;
@@ -581,9 +647,23 @@ section,
   opacity: 0.7;
 }
 
+.ticket-card ul {
+  list-style: none;
+  padding: 0;
+}
+
 .ticket-card li {
   margin-bottom: 8px;
   font-size: 14px;
+  position: relative;
+  padding-left: 18px;
+}
+
+.ticket-card li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #FFD200;
 }
 
 .ticket-card.featured {
@@ -611,6 +691,7 @@ section,
   box-shadow: 0 0 40px rgba(255,210,0,0.3);
 }
 
+/**** BUTTON ****/
 .hero-btn {
   display: inline-block;
   margin-top: 20px;
@@ -628,27 +709,6 @@ section,
   box-shadow: 0 0 20px rgba(255,210,0,0.6);
   text-decoration: none;
   color: white;
-}
-
-.tickets-hero-content {
-  animation: fadeUp 1s ease;
-}
-
-.ticket-card ul {
-  list-style: none;
-  padding: 0;
-}
-
-.ticket-card li {
-  position: relative;
-  padding-left: 18px;
-} 
-
-.ticket-card li::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  color: #FFD200;
 }
 
 @keyframes fadeUp {
@@ -672,8 +732,11 @@ section,
   letter-spacing: 4px; 
 }
 
+/******************* ************************/
+/******************* ************************/
+/******************* ************************/
 
-/* -------------------------------------- PROGRAM PODSTRANICA ------------------------ */
+/* ************************ PROGRAM PODSTRANICA *************************/
 .hero-media {
   position: absolute;
   inset: 0;
@@ -764,35 +827,95 @@ section,
 
 
 /* ----------------------- LOKACIJA PODSTRANICA -----------------------------  */
-.map-section {
-  padding: 60px 20px 40px;
+
+.location-hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 40px 20px;
+  overflow: hidden;
+}
+
+.location-hero__content {
+  max-width: 700px;
   text-align: center;
-  background: linear-gradient(180deg, #000, #111);
+  position: relative;
+  z-index: 2;
 }
 
-.map-section h2 {
-  color: #FFD200;
-  font-size: 42px;
-  margin-bottom: 30px;
-  font-family: "New Science Extended", sans-serif;
-  text-transform: uppercase;
+.location-hero h1 {
+  font-size: 32px;
+  line-height: 1.2;
+  margin: 20px 0;
+
 }
 
-.map-wrapper {
+.location-hero__bg {
   width: 100%;
-  max-width: 1000px;
-  height: 400px;
-  margin: 0 auto;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.2);
+  filter: brightness(0.5);
+}
+
+.location-tag {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #FFD200;
+  border: 1px solid rgba(255,210,0,0.3);
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+.location-hero h1 span {
+  color: #FFD200;
+}
+
+.location-hero p {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.location-map {
+  padding: 50px 20px;
+  background: #050505;
+  text-align: center;
+}
+
+.location-map__content h2 {
+  color: #FFD200;
+  margin-bottom: 10px;
+}
+
+.location-map__frame {
+  margin-top: 20px;
   border-radius: 20px;
   overflow: hidden;
   border: 1px solid rgba(255,210,0,0.2);
+  padding: 10px;
+}
+
+.location-map iframe {
+  width: 100%;
+  height: 280px;
+  border: none;
+}
+
+.map-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
   transition: 0.4s;
 }
 
-.map-wrapper iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
+.map-wrapper img {
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(0 0 15px rgba(255,210,0,0.3));
 }
 
 .map-wrapper:hover {
@@ -817,8 +940,201 @@ section,
   box-shadow: 0 0 25px rgba(255,210,0,0.7);
 }
 
+/* CTA WRAPPER */
+.mf-hero__cta {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
 
-/* ------------ KONTAKT PODSTRANICA ------------------- */
+.mf-btn {
+  text-decoration: none;
+  padding: 14px 22px;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: 0.3s ease;
+  display: inline-block;
+}
+
+.mf-btn--primary {
+  background: #FFD200;
+  color: #000;
+  box-shadow: 0 0 15px rgba(255,210,0,0.5);
+}
+
+.mf-btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(255,210,0,0.9);
+  color: white;
+  text-decoration: none;
+}
+
+.mf-btn--secondary {
+  border: 1px solid #FFD200;
+  color: #FFD200;
+}
+
+.mf-btn--secondary:hover {
+  background: rgba(255,210,0,0.1);
+  color: white;
+  text-decoration: none;
+}
+
+/* u brojkama */
+
+.location-highlights {
+  padding: 100px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.location-highlights__title {
+  color: #FFD200;
+  font-size: 27px;
+}
+
+.location-highlights__list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.location-item {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.location-item__number {
+  font-size: 34px;
+  font-weight: 500;
+  letter-spacing: -1px;
+  color: #fff;
+}
+
+.location-item__text {
+  font-size: 14px;
+  color: #888;
+  margin-top: 5px;
+}
+
+.location-highlight__statement {
+  margin-top: 60px;
+  font-size: 20px;
+  line-height: 1.6;
+  color: #fff;
+  max-width: 600px;
+  border-left: 2px solid #FFD200;
+  padding-left: 15px;
+}
+
+/* ZONES */
+.location-zones {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  background: #0a0a0a;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.location-zones h2 {
+  color: #FFD200;
+}
+
+.location-zones__grid {
+  display: grid;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.location-zone span {
+  font-size: 28px;
+}
+
+.location-zone:hover {
+  transform: translateY(-6px);
+  border-color: #FFD200;
+  box-shadow: 0 0 25px rgba(255,210,0,0.15);
+}
+
+.location-zone {
+  padding: 30px 0;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  background: linear-gradient(145deg, #0a0a0a, #111);
+  border: 1px solid rgba(255,210,0,0.1);
+  border-radius: 18px;
+  transition: 0.3s;
+}
+
+.location-zone h3 {
+  color: #FFD200;
+  font-size: 18px;
+  margin: 10px 0;
+
+}
+
+.location-zone p {
+  color: #888;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+/* DISTANCES*/
+
+.location-access {
+  padding: 100px 20px;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  background: #000;
+}
+
+.location-access h2 {
+  color: #FFD200;
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.location-access p {
+  color: rgba(255,255,255,0.75);
+  text-align: center;
+  font-size: 14px;
+  margin-top: -25px;
+  margin-bottom: 35px;
+  letter-spacing: 0.3px;
+}
+
+.distances {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.distances div {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  font-size: 16px;
+  color: #aaa;
+  background: rgba(255,255,255,0.05);
+  padding: 12px;
+  border-radius: 10px;
+  margin: 8px 0;
+}
+
+.distances div span:last-child {
+  color: #FFD200;
+  margin-left: auto;
+  text-align: right;
+}
+
+
+
+/**------------ KONTAKT PODSTRANICA ------------------- */
 .contact-section {
   padding: 80px 20px;
   background: linear-gradient(180deg, #111, #000);
@@ -913,9 +1229,8 @@ section,
 }
 
 /* vodeci ljudi */
-
 /* SECTION TITLE */
-.section-title {
+/* .section-title {
   text-align: center;
   color: #FFD200;
   font-family: "New Science Extended";
@@ -974,7 +1289,7 @@ section,
 
 .person:hover {
   box-shadow: 0 0 25px rgba(255,210,0,0.4);
-}
+} */
 
 
 /* --------------- PROBA ----------- */
@@ -1093,105 +1408,56 @@ section,
   100% { transform: translate(0); }
 }
 
-.category-bg img {
-  transform: scale(1.1);
-  transition: transform 6s ease;
-}
-
-.category:hover .category-bg img {
-  transform: scale(1.2);
-}
-
-
-/* --------------- PROBA ----------- */
-.about-compact {
-  /* padding: 60px 20px; */
-  background: #000;
-  color: #fff;
-}
-
-.about-title {
-  font-size: 18px;
-  letter-spacing: 2px;
-  color: #777;
-  margin-bottom: 15px;
-}
-
-.about-big {
-  font-size: 26px;
-  font-weight: 800;
-  line-height: 1.2;
-  margin-bottom: 10px;
-}
-
-.highlight-about {
-  color: #FFD200;
-}
-
-.about-text {
-  font-size: 17px;
-  font-weight: 500;
-  color: #bbb;
-  line-height: 1.8;
-  margin: 10px 0;
-  max-width: 500px;
-}
 /* --------------- PROBA ----------- */
 
-/* SPONZORI     ****************************/
-.sponsors {
-  padding: 40px 20px;
+
+/* PITANJA */
+
+.mf-faq {
+  padding: 80px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.mf-faq__title {
   text-align: center;
-  overflow: hidden;
-  position: relative;
-}
-
-.sponsors-title {
   color: #FFD200;
-  font-size: 2.5rem;
-  font-weight: 800;
-  margin-bottom: 60px;
-  text-transform: uppercase;
+  font-size: 32px;
+  letter-spacing: 3px;
+  margin-bottom: 40px;
 }
 
 
-.sponsors-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-} 
-
-.sponsor-item {
-  background: rgba(255,255,255,0.05);
-  transition: 0.4s ease;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  height: 80px;
+.faq-item {
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding: 10px 0;
 }
 
-.sponsor-item img {
-  max-width: 100%;
-  max-height: 95px;
-  object-fit: contain;
-  filter: grayscale(100%) brightness(0.8);
-  opacity: 0.6;
-  transition: all 0.3s ease;
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  color: #FFD200;
+  font-size: 18px;
+  text-align: left;
+  padding: 15px 0;
+  cursor: pointer;
+  font-weight: 600;
 }
 
-.sponsor-item:hover img {
-  filter: grayscale(0%) brightness(1);
-  opacity: 1;
-  transform: scale(1.1);
-}
-/* ANIMATION */
-@keyframes scrollSponsors {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  color: #eaeaea;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0 0;
 }
 
+/* open state */
+.faq-item.active .faq-answer {
+  max-height: 200px;
+  padding: 10px 0 15px;
+}
 
 /* DESKTOP */
 @media(min-width:768px){
@@ -1370,15 +1636,6 @@ section,
     right: 15%;
   }
 
-  /* .category.right::after {
-    background: linear-gradient(
-      to left,
-      rgba(0,0,0,0.85) 20%,
-      rgba(0,0,0,0.4) 60%,
-      transparent 100%
-    );
-  } */
-
   .category-content.motorsport,
   .category-content.newcomers,
   .category-content.supercars {
@@ -1460,18 +1717,142 @@ section,
     margin: 0 auto;
   }
 
+
+
+
   /* LOKACIJA */
-  .map-wrapper {
-    height: 450px;
+  .location-hero {
+    height: 70vh;
+    align-items: center;
   }
 
-  .info-grid {
-    grid-template-columns: repeat(2,1fr);
+  .location-hero__content {
+    max-width: 800px;
+    top: 30%;
+  }
+
+  .location-hero h1 {
+    font-size: 64px;
+    line-height: 1.1;
+  }
+
+  .location-hero p {
+    font-size: 24px;
+  }
+
+  .location-tag {
+    font-size: 16px;
+  }
+  
+  .location-map {
+    padding: 120px 20px;
+    text-align: center;
+  }
+
+  .location-map__content {
+    max-width: 600px;
+    margin: 0 auto 40px;
+  }
+
+  .location-map__content p {
+    font-size: 18px;
+    line-height: 1.6;
   }
 
   .map-wrapper {
-    height: 500px;
+    max-width: 900px;
+    margin: 0 auto;
   }
+
+  .location-map iframe {
+    height: 420px;
+  }
+
+  .cta {
+    margin-top: 30px;
+  }
+
+  .location-zones {
+    /* grid-template-columns: repeat(2, 1fr); */
+    gap: 20px;
+    padding: 50px 20px;
+  }
+
+  .location-zone h3 {
+    font-size: 25px;
+  }
+
+  .location-highlights__title {
+    font-size: 45px;
+  }
+
+  .location-highlight__statement {
+    max-width: 900px;
+  }
+
+  .location-zone p {
+    font-size: 17px;
+  }
+
+  .location-access {
+    padding: 60px 20px;
+  }
+
+  .location-access h2,
+  .location-zones h2 {
+    font-size: 32px;
+  }
+
+  .distances div {
+    font-size: 18px;
+  }
+
+  .mf-hero__cta {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .location-zones__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .location-zones__grid {
+    gap: 30px;
+  }
+
+  .distances {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 40px;
+  }
+
+  .distances div {
+    padding: 14px 0;
+    background: transparent;
+    border-radius: 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .location-highlights {
+    max-width: 1000px;
+  }
+
+  .location-highlights__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 80px;
+  }
+
+  .location-item {
+    padding: 25px 0;
+  }
+
+
+
+
+
+
+
 
   /* ABOUT */
 
@@ -1536,13 +1917,15 @@ section,
     top: 25%;
   }
 
-  .tickets-hero-content h1 {
+  .tickets-hero-content h1,
+  .location-content h1 {
     font-size: 3rem;
     letter-spacing: 6px;
     font-weight: 800;
   }
 
-  .tickets-hero-content p {
+  .tickets-hero-content p,
+  .location-content p {
     font-size: 20px;
   }
 
@@ -1554,6 +1937,21 @@ section,
     position: absolute;
     inset: unset;
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
 
@@ -1567,12 +1965,6 @@ section,
     font-size: 3rem;
   }
 
-
-  .map-wrapper {
-    height: 600px;
-    max-width: 1000px;
-    margin: 0 auto;
-  }
 
   .tickets-types {
     grid-template-columns: repeat(3,1fr);
@@ -1620,6 +2012,19 @@ section,
 
   .people-text p {
     font-size: 17px;
+  }
+
+
+
+
+
+
+   .location-zones__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .location-hero h1 {
+    font-size: 52px;
   }
 }
 

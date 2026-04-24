@@ -20,20 +20,25 @@
 
     <div id="header-placeholder"></div>
 
-    <section class="page-hero">
-        <h1>FAQ</h1>
+    <section class="mf-faq">
+        
+        <h2 class="mf-faq__title">FAQ</h2>
     </section>
 
     <section class="faq container">
 
         <div class="faq-item">
-            <h3>Mogu li kupiti ulaznice na ulazu?</h3>
-            <p>Da, ali preporučujemo online kupnju.</p>
+            <button class="faq-question">Mogu li kupiti ulaznice na ulazu?</button>
+            <div class="faq-answer">
+                Da, ali preporučujemo online kupnju.
+            </div>
         </div>
 
         <div class="faq-item">
-            <h3>Smijem li dovesti djecu?</h3>
-            <p>Da, uz pratnju odraslih.</p>
+            <button class="faq-question">Smijem li dovesti djecu?</button>
+            <div class="faq-answer">
+                Da, uz pratnju odraslih.
+            </div>
         </div>
 
     </section>
@@ -50,6 +55,27 @@
         function toggleMenu(){
         document.getElementById("menu").classList.toggle("active");
         }
+    </script>
+
+    <script>
+        const items = document.querySelectorAll(".faq-item");
+
+        items.forEach(item => {
+            const question = item.querySelector(".faq-question");
+
+            question.addEventListener("click", () => {
+
+                // zatvori sve ostale
+                items.forEach(i => {
+                if (i !== item) {
+                    i.classList.remove("active");
+                }
+                });
+
+                // toggle trenutni
+                item.classList.toggle("active");
+            });
+        });
     </script>
 </body>
 </html>

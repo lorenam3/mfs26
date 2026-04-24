@@ -5,15 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ulaznice</title>
 
-        <!-- Bootstrap -->
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-
     <!-- Swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-
     <!-- AOS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
-
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -33,22 +30,9 @@
         <div class="tickets-hero-content">
             <h1>ULAZNICE</h1>
             <p>Odaberi svoju ulaznicu i osiguraj mjesto na najbržem eventu godine. 3 dana. 400+ vozila. Bez kočnica.</p>
-            <a href="https://www.entrio.hr/event/meet-for-speed-31443" class="hero-btn">KUPI ULAZNICE</a>
-
+            <a href="https://www.entrio.hr/event/meet-for-speed-31443" target="_blank" class="hero-btn">KUPI ULAZNICE</a>
         </div>
     </section>
-    <!-- HERO -->
-    <!-- <section class="page-hero">
-        <h1>ULAZNICE</h1>
-    </section>
-
-     INTRO 
-    <section class="tickets-intro">
-        <p>
-            Odaberi svoju ulaznicu i osiguraj mjesto na najbržem eventu godine.
-            3 dana. 400+ vozila. Bez kočnica.
-        </p>
-    </section> -->
 
     <!-- TICKETS -->
     <section class="tickets-types">
@@ -116,21 +100,21 @@
     <!-- SCRIPTS -->
     <script src="header.js"></script>
     <script>
-    fetch("header.html")
-    .then(res => res.text())
-    .then(data => {
-        document.getElementById("header-placeholder").innerHTML = data;
-    });
-
-    function toggleMenu(){
-        document.getElementById("menu").classList.toggle("active");
-    }
-
-    function goToBuy(){
-        document.getElementById("buy").scrollIntoView({
-            behavior: "smooth"
+        fetch("header.html")
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById("header-placeholder").innerHTML = data;
         });
-    }
+
+        function toggleMenu(){
+            document.getElementById("menu").classList.toggle("active");
+        }
+
+        function goToBuy(){
+            document.getElementById("buy").scrollIntoView({
+                behavior: "smooth"
+            });
+        }
     </script>
 
 </body>
