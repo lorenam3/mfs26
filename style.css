@@ -269,12 +269,12 @@ section,
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
+  /* background: linear-gradient(
     to top,
     rgba(0,0,0,58%),
     rgba(0,0,0,0.3),
     transparent
-  );
+  ); */
 }
 
 .category-content {
