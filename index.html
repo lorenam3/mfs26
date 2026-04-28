@@ -148,10 +148,10 @@
   <section class="about-compact" data-aos="fade-up">
     <div class="container">
 
-      <p class="about-big">
+      <p class="about-big second">
         <span class="white"><span class="yellow">3</span> dana.</span><br>
         <span class="white"><span class="yellow">24</span> sata programa.</span><br>
-        <span class="white"><span class="accent">Bez kočnice.</span></span>      </p>
+        <span class="white"><span class="accent">Bez kočnica.</span></span>      </p>
 
     </div>
   </section>
@@ -243,7 +243,7 @@
     <div class="container">
 
       <p class="autoshow-clean-title">
-        <span>Bez ograde.</span>
+        <span>Bez ograda.</span>
         <span>Bez barijera.</span>
         <span>Brzina <span class="accent">iz prve ruke.</span></span>
       </p>
@@ -286,9 +286,8 @@
     <div class="container">
 
       <p class="about-big highlight-about">
-        <span class="yellow">Najveća imena</span>
-        <span class="white">iz automoto svijeta</span>
-        <span class="white underline-accent">u regiji.</span>
+        <span class="yellow">Najzvučnija imena</span>
+        <span class="white">iz auto-moto svijeta <span class="white underline-accent">u regiji.</span> </span>
       </p>
 
     </div>
@@ -377,6 +376,8 @@
     <a href="https://www.entrio.hr/event/meet-for-speed-31443" target="_blank" class="hero-btn">KUPI ULAZNICE</a>
   </section>
 
+  <div id="footer-placeholder"></div>
+
   <script src="header.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
@@ -390,6 +391,13 @@
       .then(data => {
         document.getElementById("header-placeholder").innerHTML = data;
       });
+
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => {
+          document.getElementById("footer-placeholder").innerHTML = data;
+      });
+
 
     // Toggle menu
     function toggleMenu(){
