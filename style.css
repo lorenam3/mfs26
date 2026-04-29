@@ -216,26 +216,13 @@ section,
 }
 
 .autoshow-stack {
-  font-size: 29px;
+  font-size: 31px;
   font-weight: 800;
-  line-height: 1.05;
+  line-height: 1;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-
-/* .autoshow-stack span {
-  display: inline-block;
-  letter-spacing: 1px;
-}
-
-.autoshow-stack span:nth-child(odd) {
-  transform: skewX(-5deg);
-}
-
-.autoshow-stack span:nth-child(even) {
-  transform: skewX(5deg);
-} */
 
 .accent {
   position: relative;
@@ -987,7 +974,79 @@ section,
   color: #ff3c3c;
 }
 
+.program-intro {
+  margin: 20px auto;
+  padding: 0 10px;
+}
 
+.program-intro p {
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.program-intro {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,210,0,0.15);
+  border-radius: 15px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.program-intro::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: 60px;
+  height: 2px;
+  background: #FFD200;
+  box-shadow: 0 0 10px #FFD200;
+}
+
+.program-intro p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+.program-intro p:last-child {
+  margin-bottom: 0;
+}
+
+.program-intro:hover {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,210,0,0.3);
+}
+
+.program-note {
+  margin-top: 30px;
+  font-size: 14px;
+  line-height: 1.5;
+  opacity: 0.6;
+  text-align: center;
+  position: relative;
+  padding-top: 15px;
+}
+
+.program-note::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 1px;
+  background: rgba(255,210,0,0.3);
+}
+
+.note-star {
+  color: #FFD200;
+  margin-right: 5px;
+}
 /* ----------------------- LOKACIJA PODSTRANICA -----------------------------  */
 
 .location-hero {
@@ -1849,12 +1908,12 @@ section,
   }
 
   .autoshow-mixed-title {
-  font-size: 64px;
-  font-weight: 800;
-  line-height: 1.15;
-  letter-spacing: 0.2px;
-  color: #fff;
-}
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: 0.2px;
+    color: #fff;
+  }
   .label {
     color: #FFD200;
     font-size: 14px;
@@ -2186,15 +2245,25 @@ section,
   }
 
 
+  /************ PROGRAM *************/
 
+  .program-intro {
+    padding: 25px 30px;
+  }
 
+  .program-intro p {
+    font-size: 15px;
+  }
 
-
+  .program-note {
+    font-size: 15px;
+    margin-top: 40px;
+  }
 
 
 
   /*************FOOTER ***************/
-   .event-footer {
+  .event-footer {
     padding: 60px 20px 20px;
   }
 
@@ -2214,10 +2283,6 @@ section,
     text-align: left;
   }
 
-
-
-
-
 }
 
 @media(min-width:1200px){
@@ -2229,7 +2294,6 @@ section,
   .page-hero h1 {
     font-size: 3rem;
   }
-
 
   .tickets-types {
     grid-template-columns: repeat(3,1fr);
@@ -2284,12 +2348,28 @@ section,
 
 
 
-   .location-zones__grid {
+  .location-zones__grid {
     grid-template-columns: repeat(4, 1fr);
   }
 
   .location-hero h1 {
     font-size: 52px;
+  }
+
+  .program-intro {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px 40px;
+  }
+
+  .program-intro p {
+    font-size: 20px;
+  }
+
+  .program-note {
+    font-size: 20px;
+    max-width: 800px;
+    margin: 50px auto 0;
   }
 }
 
