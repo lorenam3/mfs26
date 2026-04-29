@@ -974,6 +974,10 @@ section,
   color: #ff3c3c;
 }
 
+.pause {
+  color: rgba(255, 255, 255, 0.5);
+}
+
 .program-intro {
   margin: 20px auto;
   padding: 0 10px;
