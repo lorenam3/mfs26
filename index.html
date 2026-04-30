@@ -369,48 +369,62 @@
     </div>
 </section>
 
-  <!-- FINAL ulaznice-->
-  <section class="final-cta">
-    <h2>OSJETI BRZINU SVIM OSJETILIMA</h2>
-    <a href="https://www.entrio.hr/event/meet-for-speed-31443" target="_blank" class="hero-btn">KUPI ULAZNICE</a>
-  </section>
+<!-- FINAL ulaznice-->
+<section class="final-cta">
+  <h2>OSJETI BRZINU SVIM OSJETILIMA</h2>
+  <a href="https://www.entrio.hr/event/meet-for-speed-31443" target="_blank" class="hero-btn">KUPI ULAZNICE</a>
+</section>
 
-  <div id="footer-placeholder"></div>
+<div id="footer-placeholder"></div>
 
-  <script src="header.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    // AOS
-    AOS.init();
+<div id="cookie-banner" class="cookie-banner">
+  <div class="cookie-box">
+    <p class="cookie-text">
+      Koristimo nužne kolačiće za ispravno funkcioniranje web stranice. U nastavku možete upravljati svojim izborom.
+      <a href="cookies.html">Saznaj više</a>
+    </p>
 
-    // Header
-    fetch("header.html")
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById("header-placeholder").innerHTML = data;
-      });
+    <div class="cookie-buttons">
+      <button id="reject-cookies" class="btn-reject">Odbij</button>
+      <button id="accept-cookies" class="btn-accept">Prihvati</button>
+    </div>
+  </div>
+</div>
 
-    fetch("footer.html")
-      .then(res => res.text())
-      .then(data => {
-          document.getElementById("footer-placeholder").innerHTML = data;
-      });
+<script src="header.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  // AOS
+  AOS.init();
+
+  // Header
+  fetch("header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+    });
+
+  fetch("footer.html")
+    .then(res => res.text())
+    .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+    });
 
 
-    // Toggle menu
-    function toggleMenu(){
-      const menu = document.getElementById("menu");
-      if(menu) menu.classList.toggle("active");
-    }
+  // Toggle menu
+  function toggleMenu(){
+    const menu = document.getElementById("menu");
+    if(menu) menu.classList.toggle("active");
+  }
 
-    // Scroll header
-    const header = document.querySelector(".header");
-    if(header){
-      window.addEventListener("scroll", () => {
-        header.style.background = window.scrollY > 50 ? "black" : "rgba(0,0,0,0.8)";
-      });
-    }
+  // Scroll header
+  const header = document.querySelector(".header");
+  if(header){
+    window.addEventListener("scroll", () => {
+      header.style.background = window.scrollY > 50 ? "black" : "rgba(0,0,0,0.8)";
+    });
+  }
 
     // Swiper carousel
     new Swiper(".mySwiper", {
@@ -448,9 +462,8 @@
         loop: true,
       });
     });
-
-
   </script>
+  <script src="cookie.js"></script>
 
 </body>
 </html>

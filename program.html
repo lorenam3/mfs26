@@ -661,8 +661,37 @@
 
     </section>
 
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-box">
+            <p>
+            Koristimo nužne kolačiće za ispravno funkcioniranje web stranice. U nastavku možete upravljati svojim izborom.
+            <a href="cookies.html">Saznaj više</a>
+            </p>
+
+            <div class="cookie-buttons">
+            <button id="reject-cookies" class="btn-reject">Odbij</button>
+            <button id="accept-cookies" class="btn-accept">Prihvati</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-box">
+            <p class="cookie-text">
+            Koristimo nužne kolačiće za ispravno funkcioniranje web stranice. U nastavku možete upravljati svojim izborom.
+            <a href="cookies.html">Saznaj više</a>
+            </p>
+
+            <div class="cookie-buttons">
+            <button id="reject-cookies" class="btn-reject">Odbij</button>
+            <button id="accept-cookies" class="btn-accept">Prihvati</button>
+            </div>
+        </div>
+    </div>
+
     <!-- SCRIPTS -->
     <script src="header.js"></script>
+    <script src="cookie.js"></script>
 
     <script>
         fetch("header.html")
@@ -674,10 +703,9 @@
         function toggleMenu(){
         document.getElementById("menu").classList.toggle("active");
         }
-        
-    </script>
 
-    <script>
+
+
         const tabs = document.querySelectorAll('.day-tab');
         const days = document.querySelectorAll('.day-content');
 
@@ -694,5 +722,7 @@
             });
         });
     </script>
+
+    <script src="cookie.js"></script>
 </body>
 </html>
