@@ -1680,10 +1680,35 @@ section,
 
 /* open state */
 .faq-item.active .faq-answer {
-  max-height: 200px;
+  max-height: 500px;
   padding: 10px 0 15px;
 }
 
+.faq-answer {
+  font-size: 17px;
+  line-height: 1.6;
+  padding-top: 8px;
+}
+
+.faq-answer p {
+  margin: 10px 0 6px;
+  font-weight: 600;
+}
+
+.faq-answer ul {
+  margin: 0 0 12px;
+  padding-left: 18px;
+}
+
+.faq-answer li {
+  margin-bottom: 4px;
+}
+
+.faq-note {
+  font-size: 15px;
+  opacity: 0.75;
+  margin-top: 10px;
+}
 /***************************** FOOTER **************************/
 .event-footer {
   background: #0b0b0b;
