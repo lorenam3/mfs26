@@ -1823,6 +1823,29 @@ section,
   text-align: center;
 }
 
+.footer-bottom-bar {
+  margin-top: 30px;
+  padding-top: 15px;
+  font-size: 14px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+.footer-links a:hover {
+  color: #FFD200;
+}
+
+
 .event-date {
   font-weight: 700;
   opacity: 0.9;
@@ -1838,6 +1861,21 @@ section,
   display: inline-block;
 }
 
+.footer-grid a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.7;
+  margin-bottom: 6px;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.footer-grid a:hover {
+  color: #FFD200;
+  opacity: 1;
+  transform: translateX(3px);
+}
 /**************** COOKIE BANNER *********************/
 
 .cookie-buttons {
@@ -1907,6 +1945,7 @@ section,
   font-size: 14px;
   line-height: 1.4;
   margin: 0;
+  text-align: center;
 }
 
 .cookie-text a {
@@ -2484,6 +2523,33 @@ section,
     font-size: 18px;
   }
 
+  /* BOTTOM BAR (F1 STRIP STYLE) */
+  .footer-bottom-bar {
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    text-align: center;
+  }
+
+  .footer-meta {
+    opacity: 0.6;
+    font-size: 13px;
+  }
+
+  .footer-links {
+    align-items: center;
+    font-size: 13px;
+  }
+
+  .footer-links a {
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.7;
+  }
+
+  .footer-links a:hover {
+    color: #FFD200;
+  }
 
   /************* COOKIE BANNER ****************/
 
@@ -2496,6 +2562,7 @@ section,
 
   .cookie-box p {
     font-size: 14px;
+    text-align: justify;
   }
 
   .cookie-buttons {
