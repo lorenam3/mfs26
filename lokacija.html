@@ -34,7 +34,7 @@
             </h1>
 
             <p>
-                27 sati čistog adrenalina na najpoznatijoj stazi u regiji.
+                24 sati čistog adrenalina na najpoznatijoj stazi u regiji.
             </p>
 
             <div class="mf-hero__cta">
@@ -80,13 +80,8 @@
             </div>
 
             <div class="location-item">
-                <div class="location-item__number">9 sati</div>
+                <div class="location-item__number">8 sati</div>
                 <div class="location-item__text">programa dnevno </div>
-            </div>
-
-            <div class="location-item">
-                <div class="location-item__number">1350 mjesta</div>
-                <div class="location-item__text">Tribina 1 i Tribina 2</div>
             </div>
 
             <div class="location-item">
@@ -165,6 +160,8 @@
 
     </section>
 
+    <div id="footer-placeholder"></div>
+
     <div id="cookie-banner" class="cookie-banner">
         <div class="cookie-box">
             <p class="cookie-text">
@@ -192,6 +189,12 @@
         .then(res => res.text())
         .then(data => {
             document.getElementById("header-placeholder").innerHTML = data;
+        });
+
+        fetch("footer.html")
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById("footer-placeholder").innerHTML = data;
         });
 
         function toggleMenu(){

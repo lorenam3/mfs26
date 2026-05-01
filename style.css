@@ -743,7 +743,9 @@ section,
 }
 
 .tickets-hero-content h1,
-.location-content h1 {
+.location-content h1,
+.mf-faq h1,
+.contact h1 {
   font-size: 2rem;
   color: #FFD200;
   letter-spacing: 3px;
@@ -1030,7 +1032,6 @@ section,
   margin-top: 30px;
   font-size: 14px;
   line-height: 1.5;
-  opacity: 0.6;
   text-align: center;
   position: relative;
   padding-top: 15px;
@@ -1050,6 +1051,10 @@ section,
 .note-star {
   color: #FFD200;
   margin-right: 5px;
+}
+
+.note-text {
+  font-size: 15px;
 }
 /* ----------------------- LOKACIJA PODSTRANICA -----------------------------  */
 
@@ -1360,6 +1365,9 @@ section,
 
 
 /**------------ KONTAKT PODSTRANICA ------------------- */
+.contact {
+  padding-top: calc(var(--section-space-mobile) + var(--header-height));
+}
 .contact-section {
   padding: 80px 20px;
   background: linear-gradient(180deg, #111, #000);
@@ -1428,6 +1436,16 @@ section,
   filter: brightness(1) invert(0);
 }
 
+.social-icon {
+  width: 32px;
+  stroke: #fff;
+  transition: 0.3s;
+}
+
+.social-icons a:hover .social-icon {
+  stroke: #FFD200;
+}
+
 .contact-form form {
   display: flex;
   flex-direction: column;
@@ -1453,6 +1471,37 @@ section,
   align-self: flex-start;
 }
 
+
+/* proba za kontakt */
+
+.contact-section {
+  padding: 100px 20px;
+  background: radial-gradient(circle at top, #111, #000);
+}
+
+.contact-title {
+  color: #FFD200;
+  font-size: 42px;
+  text-align: center;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+.contact-subtitle {
+  opacity: 0.75;
+  max-width: 650px;
+  margin: 0 auto 60px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
 /* vodeci ljudi */
 /* SECTION TITLE */
 /* .section-title {
@@ -1638,10 +1687,13 @@ section,
 
 /* PITANJA */
 
+
 .mf-faq {
   padding: 80px 20px;
   max-width: 800px;
   margin: 0 auto;
+  padding-top: calc(var(--section-space-mobile) + var(--header-height));
+  animation: fadeUp 1s ease;
 }
 
 .mf-faq__title {
@@ -1708,6 +1760,12 @@ section,
   font-size: 15px;
   opacity: 0.75;
   margin-top: 10px;
+}
+
+.faq-answer a {
+    color: #FFD200;
+    text-decoration: underline;
+    font-weight: 600;
 }
 /***************************** FOOTER **************************/
 .event-footer {
@@ -2129,6 +2187,22 @@ section,
     margin: 0 auto;
   }
 
+  .ticket-card li {
+    font-size: 17px;
+  }
+
+  .ticket-card .desc {
+    font-size: 17px;
+  }
+
+  .note-text {
+    font-size: 17px;
+  }
+
+  .note {
+    font-size: 17px;
+  }
+
 
 
 
@@ -2330,7 +2404,9 @@ section,
   }
 
   .tickets-hero-content h1,
-  .location-content h1 {
+  .location-content h1,
+  .mf-faq h1,
+  .contact h1{
     font-size: 3rem;
     letter-spacing: 6px;
     font-weight: 800;
@@ -2350,6 +2426,10 @@ section,
     inset: unset;
   }
 
+  /************* PITANJA**********/
+  .mf-faq {
+    padding-top: calc(var(--section-space) + var(--header-height));
+  }
 
   /************ PROGRAM *************/
 
@@ -2366,6 +2446,9 @@ section,
     margin-top: 40px;
   }
 
+  .event {
+    font-size: 20px;
+  }
 
 
   /*************FOOTER ***************/
@@ -2387,6 +2470,18 @@ section,
     justify-content: space-between;
     align-items: center;
     text-align: left;
+  }
+
+  .footer-grid h4 {
+    font-size: 20px;
+  }
+
+  .footer-grid a {
+    font-size: 18px;
+  }
+
+  .footer-grid p {
+    font-size: 18px;
   }
 
 

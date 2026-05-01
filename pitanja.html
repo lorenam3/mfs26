@@ -22,7 +22,7 @@
 
     <section class="mf-faq">
         
-        <h2 class="mf-faq__title">FAQ</h2>
+        <h1 class="mf-faq__title">ČESTA PITANJA</h2>
     </section>
 
     <section class="faq container">
@@ -69,21 +69,20 @@
                 <ul>
                     <li>Ulaz na festival</li>
                     <li>Parkiranje</li>
-                    <li>Pristup tribinama*</li>
+                    <li>Pristup tribinama<span class="note-star">*</span></li>
                 </ul>
 
                 <p>VIP ulaznica:</p>
                 <ul>
                     <li>Ulaz na festival</li>
                     <li>Parkiranje (VIP)</li>
-                    <li>Pristup tribinama*</li>
+                    <li>Pristup tribinama<span class="note-star">*</span></li>
                     <li>Hrana i piće</li>
                     <li>Pristup VIP prostorima (terasa + klimatizirani prostor)</li>
                 </ul>
 
-                <p class="faq-note">
-                    * sjedala nisu rezervirana, već ovise o trenutnoj raspoloživosti
-                </p>
+                            <small class="note-text"><span class="note-star">*</span>sjedala nisu rezervirana, već ovise o trenutnoj raspoloživosti</small>
+
             </div>
         </div>
 
@@ -111,15 +110,17 @@
         <div class="faq-item">
             <button class="faq-question">Gdje mogu pogledati program festivala?</button>
             <div class="faq-answer">
-                Program festivala dostupan je na sljedećoj poveznici (link na Program)
+                Program festivala dostupan je ovdje: 
+                <a href="program.html" target="_blank">Program</a>
             </div>
         </div>
 
         <div class="faq-item">
             <button class="faq-question">Kako doći do lokacije?</button>
-            <div class="faq-answer">
-                Detaljne upute i lokaciju možete pronaći na sljedećoj poveznici (link na Lokacija)
-            </div>
+                <div class="faq-answer">
+                    Detaljne upute i lokaciju možete pronaći ovdje: 
+                    <a href="lokacija.html" target="_blank">Lokacija</a>
+                </div>
         </div>
 
         <div class="faq-item">
@@ -146,13 +147,12 @@
         <div class="faq-item">
             <button class="faq-question">Koje je radno vrijeme festivala?</button>
             <div class="faq-answer">
-                8:30 otvaranje parkirališta (besplatno) <br>
-                9:00 otvaranje ulaznih vrata posjetiteljima, što je sjajna prilika za
+                <strong>08:30</strong> - Otvaranje parkirališta (besplatno) <br>
+               <strong>09:00</strong> - Otvaranje ulaznih vrata posjetiteljima, što je sjajna prilika za
                 razgledavanje festivala prije nego li krene akcija <br>
-                10:00 početak službenog dijela programa na trkaćoj stazi (svakog dana) <br>
-                18:00 zatvaranje ugostiteljskih objekata <br>
-
-                19:00 zatvaranje festivala
+                <strong>10:00</strong> - Početak službenog dijela programa na trkaćoj stazi (svakog dana) <br>
+                 <strong>18:00</strong> - Zatvaranje ugostiteljskih objekata <br>
+                 <strong>19:00</strong> - Zatvaranje festivala
             </div>
         </div>
         
@@ -229,12 +229,16 @@
         <div class="faq-item">
             <button class="faq-question">Kako vas mogu kontaktirati?</button>
             <div class="faq-answer">
-                Za sve upite možete nam se obratiti putem: <br>
-                    E-maila: info@meetforspeed.hr <br>
-                    Društvenih mreža: Instagram i TikTok
+                Za sve upite možete nam se obratiti putem:<br>
+                E-mail: <a href="mailto:info@meetforspeed.hr">info@meetforspeed.hr</a><br>
+                Društvene mreže: 
+                <a href="https://www.instagram.com/meet_for_speed?igsh=bjg5Y2d2a21wdXVw" target="_blank">Instagram</a> i 
+                <a href="https://www.tiktok.com/@meetforspeed?_r=1&_t=ZN-95upQmQHht0" target="_blank">TikTok</a>
             </div>
         </div>
     </section>
+
+    <div id="footer-placeholder"></div>
 
     <div id="cookie-banner" class="cookie-banner">
         <div class="cookie-box">
@@ -257,6 +261,12 @@
         .then(res => res.text())
         .then(data => {
         document.getElementById("header-placeholder").innerHTML = data;
+        });
+
+        fetch("footer.html")
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById("footer-placeholder").innerHTML = data;
         });
 
         function toggleMenu(){
